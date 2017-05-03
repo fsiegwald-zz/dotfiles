@@ -2,16 +2,16 @@ set $mod Mod4
 
 # i3-gaps config
 for_window [class="^.*"] border pixel 1
-smart_gaps on
-gaps inner 15
+#smart_gaps on
+#gaps inner 15
 #gaps outer 0
 
 # popup
 popup_during_fullscreen smart
 
 # font
-font pango:Gohu GohuFont 9
-
+#font pango:Gohu GohuFont 9
+font pango:Hack 8
 # launch terminal
 bindsym $mod+Return exec --no-startup-id termite
 
