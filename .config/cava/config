@@ -4,10 +4,10 @@
 [general]
 
 # smoothing mode, can be normal, scientific or waves.
-; mode = waves
+mode = normal
  
 # Framerate Default: 60. Accepts only non-negative values.
-; framerate = 60 
+; framerate = 60
 
 # Sensitivity in  %. If you think the bars are to low/response is to little, try
 # increasing this value 200 means double height. Accepts only non-negative values.
@@ -29,7 +29,7 @@ overshoot = 10
 # the bandwith of the visualizer, defaults to 50 - 10000 Hz
 # Note: there is a minimum total bandwith of 43Mhz x number of bars. 
 # Cava will automatically increase the higher cuttoff if a too low band is specified.
-; lower_cutoff_freq = 100 
+; lower_cutoff_freq = 500 
 
 
 
@@ -68,16 +68,17 @@ method = pulse
 # visual styles, may be 'stereo' or 'mono'. 
 # Stereo mirrors both channels with low frequencies in center.
 # Mono averages both channels and outputs left to right lowest to highest frequencies
-style = stereo
+;style = stereo
+style = mono
 
 # raw output target defaults to stdout, a fifo will be created if target does not exist
 ; raw_target = /dev/stdout
 
 # raw data format, can be binary or ascii
-; data_format = binary
+;data_format = ascii
 
 # binary bit format, can be '8bit' (0-255) or '16bit' (0-65530) 
-; bit_format = 16bit
+;bit_format = 16bit
 
 # ascii max value, in ascii mode range will run from 0 to value specified here
 ; ascii_max_range = 1000
@@ -101,18 +102,18 @@ style = stereo
 
 # multiplier for the integral smoothing calculations. Takes values from 0 - 0.99.
 # Higher values means smoother, but less precise. 0 to disable.
-; integral = 0 
+;integral = 0
 
 # disables or enables the so-called "Monstercat smoothing". Default: 1. Set to 0 to disable.
  monstercat = 1 
 
 # Set gravity multiplier for "drop off". Higher values means bars will drop faster. 
 # Accepts only non-negative values. 0.5 means half gravity, 2 means double. Set to 0 to disable "drop off".
-gravity = 1 
+gravity = 1
 
 
 # In bar height, bars that would have been lower that this will not be drawn.
-ignore = 0 
+ignore = 5
 
 
 [eq]

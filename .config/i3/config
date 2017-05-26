@@ -113,7 +113,7 @@ assign [class="Thunar"] $workspace4
 assign [class="Google Play Music Desktop Player"] $workspace7
 assign [class="Slack"] $workspace8
 assign [class="Franz"] $workspace9
-assign [class="Skype"] $workspace10
+assign [class="skypeforlinux"] $workspace10
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -207,7 +207,7 @@ exec --no-startup-id slack
 exec --no-startup-id franz-bin
 exec --no-startup-id i3-msg 'workspace $workspace2; exec termite'
 exec --no-startup-id google-chrome-stable
-exec --no-startup-id gpmdp
+#exec --no-startup-id gpmdp
 
 # numlock on the boot
 exec_always numlockx on
