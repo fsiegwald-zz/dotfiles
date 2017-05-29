@@ -8,9 +8,9 @@ GET_VPN=$(nmcli con show | grep tun0 | cut -d ' ' -f1)
 ##Store status in STATUS
 if [[ $GET_VPN == *"tun0"* ]]
 then   
-    STATUS=ON
-#else
-#    STATUS=OFF
+    STATUS=""
+else
+    STATUS=
 fi
 
 
@@ -21,9 +21,9 @@ echo $STATUS
 
 
 ##Colors
-if [[ "$STATUS" == "ON" ]]
+if [[ "$STATUS" == "" ]]
 then
     echo "#00ff00"
-#else
-    #echo "#ff0000"
+else
+    echo "#ff0000"
 fi
