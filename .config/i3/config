@@ -170,6 +170,7 @@ client.urgent			$urgent-bg-color	$urgent-bg-color		$text-color
 # start i3bar to display a workspace bar
 bar {
         status_command i3blocks -c ~/.config/i3/i3blocks.conf
+	strip_workspace_numbers yes #hidden number in workspaces names
 	position top
 	colors {
 		background $bg-color
