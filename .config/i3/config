@@ -52,6 +52,9 @@ bindsym $mod+h split h
 # split in vertical orientation
 bindsym $mod+v split v
 
+# move workspace on left screen
+bindsym $mod+a move workspace to output left
+
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
 
@@ -112,6 +115,7 @@ assign [class="Google-chrome"] $workspace1
 assign [class="Thunar"] $workspace4
 assign [class="Google Play Music Desktop Player"] $workspace7
 assign [class="Slack"] $workspace8
+assign [class="Rambox"] $workspace9
 assign [class="Franz"] $workspace9
 assign [class="skypeforlinux"] $workspace10
 
@@ -217,7 +221,7 @@ exec_always numlockx on
 exec_always compton --config ~/.config/compton/compton.conf
 
 # wallpaper
-exec_always feh --bg-scale ~/.colors/wallpapers/arch_flowers.png
+	exec_always feh --bg-scale ~/.colors/wallpapers/arch_flowers.png
 
 # open workspace 1
 exec i3-msg workspace $workspace1
